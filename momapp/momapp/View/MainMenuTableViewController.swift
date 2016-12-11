@@ -1,17 +1,16 @@
 //
-//  MenuTableViewController.swift
-//  MomRestaurant
+//  MainMenuTableViewController.swift
+//  momapp
 //
-//  Created by Sourabh Jamlapuram on 11/18/16.
+//  Created by Sourabh Jamlapuram on 12/11/16.
 //  Copyright © 2016 Sourabh Jamlapuram. All rights reserved.
 //
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+class MainMenuTableViewController: UITableViewController {
 
-    var menuItems:[String] = []
-    
+    var mainMenuItems = [String]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,19 +20,8 @@ class MenuTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        RestaurantRepository().getMenuItems( callback: {
-            (objects) -> Void in
-            
-            
-            for object in objects{
-                self.menuItems.append(object)
-            }
-            
-            DispatchQueue.main.async {
-                 self.tableView.reloadData()    // reload in UI thread.
-            }
-        
-        })
+        mainMenuItems.append("Orders")
+        mainMenuItems.append("Menu")
     }
 
     override func didReceiveMemoryWarning() {
@@ -50,15 +38,16 @@ class MenuTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return menuItems.count
+        return mainMenuItems.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuitemcell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "mainmenuid", for: indexPath)
 
         // Configure the cell...
-        cell.textLabel?.text = menuItems[indexPath.row]
+        cell.textLabel?.text = mainMenuItems[indexPath.row]
+
         return cell
     }
     
@@ -108,9 +97,4 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    @IBAction func onOrder(_ sender: Any) {
-        print("ordering...")
-        let menuItem:String = self.menuItems[(self.tableView.indexPathForSelectedRow?.row)!]
-        RestaurantRepository().orderMenu(menuitem: menuItem)
-    }
 }

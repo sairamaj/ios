@@ -1,8 +1,8 @@
 //
 //  MenuTableViewController.swift
-//  MomRestaurant
+//  momrestaruantclientapp
 //
-//  Created by Sourabh Jamlapuram on 11/18/16.
+//  Created by Sourabh Jamlapuram on 12/3/16.
 //  Copyright © 2016 Sourabh Jamlapuram. All rights reserved.
 //
 
@@ -30,10 +30,11 @@ class MenuTableViewController: UITableViewController {
             }
             
             DispatchQueue.main.async {
-                 self.tableView.reloadData()    // reload in UI thread.
+                self.tableView.reloadData()    // reload in UI thread.
             }
-        
+            
         })
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -55,10 +56,11 @@ class MenuTableViewController: UITableViewController {
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "menuitemcell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menucellidentifier", for: indexPath)
 
         // Configure the cell...
         cell.textLabel?.text = menuItems[indexPath.row]
+
         return cell
     }
     
@@ -108,9 +110,13 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    @IBAction func onOrder(_ sender: Any) {
+    @IBAction func onOrderMenu(_ sender: Any) {
         print("ordering...")
         let menuItem:String = self.menuItems[(self.tableView.indexPathForSelectedRow?.row)!]
         RestaurantRepository().orderMenu(menuitem: menuItem)
+        
+        let alert = UIAlertController(title: "Order", message: menuItem + " has been ordered", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
