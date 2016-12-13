@@ -7,20 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5529E2167DFB02C4D489EB0F /* Pods_momapp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 876993F89C1DD3876F948CF2 /* Pods_momapp.framework */; };
 		C83FB6C91DFDD2010010A590 /* MainMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB6C81DFDD2010010A590 /* MainMenuTableViewController.swift */; };
 		C83FB6CB1DFDD4640010A590 /* SavedOrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB6CA1DFDD4640010A590 /* SavedOrderTableViewController.swift */; };
 		C83FB6CE1DFDD5490010A590 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C83FB6CD1DFDD5490010A590 /* Repository.swift */; };
+		C8728FBE1E00716D005E8317 /* AddMenuItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8728FBD1E00716D005E8317 /* AddMenuItemViewController.swift */; };
 		C8A63A781DEAA2FF00537E0E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A63A771DEAA2FF00537E0E /* AppDelegate.swift */; };
 		C8A63A7A1DEAA2FF00537E0E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8A63A791DEAA2FF00537E0E /* ViewController.swift */; };
 		C8A63A7D1DEAA2FF00537E0E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A63A7B1DEAA2FF00537E0E /* Main.storyboard */; };
 		C8A63A7F1DEAA2FF00537E0E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8A63A7E1DEAA2FF00537E0E /* Assets.xcassets */; };
 		C8A63A821DEAA2FF00537E0E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8A63A801DEAA2FF00537E0E /* LaunchScreen.storyboard */; };
+		C8BA0FF41DFF9C8000EEAFBE /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BA0FF31DFF9C8000EEAFBE /* Order.swift */; };
+		C8BBD8151E00658F005A19D7 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BBD8141E00658F005A19D7 /* MenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C7796F076BA0034595DB15C /* Pods-momapp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momapp.release.xcconfig"; path = "Pods/Target Support Files/Pods-momapp/Pods-momapp.release.xcconfig"; sourceTree = "<group>"; };
+		876993F89C1DD3876F948CF2 /* Pods_momapp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_momapp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A25CD44F44D3C27889DD2F44 /* Pods-momapp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-momapp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-momapp/Pods-momapp.debug.xcconfig"; sourceTree = "<group>"; };
 		C83FB6C81DFDD2010010A590 /* MainMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MainMenuTableViewController.swift; path = View/MainMenuTableViewController.swift; sourceTree = "<group>"; };
 		C83FB6CA1DFDD4640010A590 /* SavedOrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SavedOrderTableViewController.swift; path = View/SavedOrderTableViewController.swift; sourceTree = "<group>"; };
 		C83FB6CD1DFDD5490010A590 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Repository/Repository.swift; sourceTree = "<group>"; };
+		C8728FBD1E00716D005E8317 /* AddMenuItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AddMenuItemViewController.swift; path = View/AddMenuItemViewController.swift; sourceTree = "<group>"; };
 		C8A63A741DEAA2FF00537E0E /* momapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = momapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C8A63A771DEAA2FF00537E0E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C8A63A791DEAA2FF00537E0E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +36,8 @@
 		C8A63A7E1DEAA2FF00537E0E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C8A63A811DEAA2FF00537E0E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C8A63A831DEAA2FF00537E0E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8BA0FF31DFF9C8000EEAFBE /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Order.swift; path = Model/Order.swift; sourceTree = "<group>"; };
+		C8BBD8141E00658F005A19D7 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = View/MenuTableViewController.swift; sourceTree = "<group>"; };
 		C8C27F8C1DEAB18F00A413DB /* momapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = momapp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -36,6 +46,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5529E2167DFB02C4D489EB0F /* Pods_momapp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,6 +58,8 @@
 			children = (
 				C83FB6C81DFDD2010010A590 /* MainMenuTableViewController.swift */,
 				C83FB6CA1DFDD4640010A590 /* SavedOrderTableViewController.swift */,
+				C8BBD8141E00658F005A19D7 /* MenuTableViewController.swift */,
+				C8728FBD1E00716D005E8317 /* AddMenuItemViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -64,6 +77,8 @@
 			children = (
 				C8A63A761DEAA2FF00537E0E /* momapp */,
 				C8A63A751DEAA2FF00537E0E /* Products */,
+				FE466FB7E3BA3E230677A472 /* Pods */,
+				DEEA21E806DCC27F362A453A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -78,6 +93,7 @@
 		C8A63A761DEAA2FF00537E0E /* momapp */ = {
 			isa = PBXGroup;
 			children = (
+				C8BA0FF21DFF9C4F00EEAFBE /* Model */,
 				C83FB6CC1DFDD5310010A590 /* Repository */,
 				C83FB6C71DFDD18D0010A590 /* View */,
 				C8C27F8C1DEAB18F00A413DB /* momapp.entitlements */,
@@ -91,6 +107,31 @@
 			path = momapp;
 			sourceTree = "<group>";
 		};
+		C8BA0FF21DFF9C4F00EEAFBE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C8BA0FF31DFF9C8000EEAFBE /* Order.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DEEA21E806DCC27F362A453A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				876993F89C1DD3876F948CF2 /* Pods_momapp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FE466FB7E3BA3E230677A472 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A25CD44F44D3C27889DD2F44 /* Pods-momapp.debug.xcconfig */,
+				6C7796F076BA0034595DB15C /* Pods-momapp.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,9 +139,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C8A63A861DEAA2FF00537E0E /* Build configuration list for PBXNativeTarget "momapp" */;
 			buildPhases = (
+				176347383774537AC7BF1B3B /* [CP] Check Pods Manifest.lock */,
 				C8A63A701DEAA2FF00537E0E /* Sources */,
 				C8A63A711DEAA2FF00537E0E /* Frameworks */,
 				C8A63A721DEAA2FF00537E0E /* Resources */,
+				5D341282B6BA6831764A1133 /* [CP] Embed Pods Frameworks */,
+				FF23C4E083A45A22F6CDEF29 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -164,15 +208,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		176347383774537AC7BF1B3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5D341282B6BA6831764A1133 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momapp/Pods-momapp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF23C4E083A45A22F6CDEF29 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-momapp/Pods-momapp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C8A63A701DEAA2FF00537E0E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C8BA0FF41DFF9C8000EEAFBE /* Order.swift in Sources */,
+				C8BBD8151E00658F005A19D7 /* MenuTableViewController.swift in Sources */,
 				C83FB6CB1DFDD4640010A590 /* SavedOrderTableViewController.swift in Sources */,
 				C8A63A7A1DEAA2FF00537E0E /* ViewController.swift in Sources */,
 				C83FB6CE1DFDD5490010A590 /* Repository.swift in Sources */,
 				C83FB6C91DFDD2010010A590 /* MainMenuTableViewController.swift in Sources */,
+				C8728FBE1E00716D005E8317 /* AddMenuItemViewController.swift in Sources */,
 				C8A63A781DEAA2FF00537E0E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,6 +389,7 @@
 		};
 		C8A63A871DEAA2FF00537E0E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A25CD44F44D3C27889DD2F44 /* Pods-momapp.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = momapp/momapp.entitlements;
@@ -312,6 +408,7 @@
 		};
 		C8A63A881DEAA2FF00537E0E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6C7796F076BA0034595DB15C /* Pods-momapp.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = momapp/momapp.entitlements;

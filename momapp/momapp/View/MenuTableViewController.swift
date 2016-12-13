@@ -1,16 +1,15 @@
 //
-//  SavedOrderTableViewController.swift
+//  MenuTableViewController.swift
 //  momapp
 //
-//  Created by Sourabh Jamlapuram on 12/11/16.
+//  Created by Sourabh Jamlapuram on 12/13/16.
 //  Copyright © 2016 Sourabh Jamlapuram. All rights reserved.
 //
 
 import UIKit
 
-class SavedOrderTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController {
 
-    var orders = [Order]()
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -19,21 +18,6 @@ class SavedOrderTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
-        
-        Repository().getOrders( callback: {
-            (objects) -> Void in
-            
-            
-            for object in objects{
-                self.orders.append(object)
-            }
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()    // reload in UI thread.
-            }
-            
-        })
-
     }
 
     override func didReceiveMemoryWarning() {
@@ -45,29 +29,23 @@ class SavedOrderTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return self.orders.count
+        return 0
     }
 
-    
+    /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "orderitemid", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
 
         // Configure the cell...
-        let order = self.orders[indexPath.row]
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM HH:mm"
-        let dateString = dateFormatter.string(from: order.Date)
 
-        
-        cell.textLabel?.text = order.MenuItem + "( " + dateString + " )"
         return cell
     }
-    
+    */
 
     /*
     // Override to support conditional editing of the table view.
