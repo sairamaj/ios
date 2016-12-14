@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MenuTableViewController: UITableViewController {
+class MenuTableViewController: UITableViewController , MenuItemAddedDelegate{
 
     var menuItems:[String] = []
     override func viewDidLoad() {
@@ -27,6 +27,7 @@ class MenuTableViewController: UITableViewController {
             for object in objects{
                 self.menuItems.append(object)
             }
+            self.sortMenuItems()
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()    // reload in UI thread.
@@ -97,23 +98,39 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        var addMenuItemController = segue.destination  as! AddMenuItemViewController
+        addMenuItemController.delegate = self
     }
-    */
+ 
 
     @IBAction func onAdd(_ sender: Any) {
         let popup = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addmenuitemstoryboard")
-        popup.modalPresentationStyle = UIModalPresentationStyle.popover
+      //  popup.modalPresentationStyle = UIModalPresentationStyle.popover
         self.addChildViewController(popup)
         popup.view.frame = self.view.frame
         self.view.addSubview(popup.view)
         popup.didMove(toParentViewController: self)
+        
+    }
+    
+    func MenuItemAdded(menuItem:String){
+        self.menuItems.append(menuItem)
+        self.sortMenuItems()
+        DispatchQueue.main.async {
+            self.tableView.reloadData()    // reload in UI thread.
+        }
+    }
+    
+    func sortMenuItems() -> Void{
+        self.menuItems = self.menuItems.sorted(by: { (s1, s2) -> Bool in
+            s1.localizedCompare(s2)  == ComparisonResult.orderedAscending      })
         
     }
 }

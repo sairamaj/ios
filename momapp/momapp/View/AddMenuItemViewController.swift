@@ -9,8 +9,14 @@
 import UIKit
 import SwiftForms
 
+protocol MenuItemAddedDelegate{
+    func MenuItemAdded(menuItem:String)
+}
+
 class AddMenuItemViewController: FormViewController {
 
+    var delegate:MenuItemAddedDelegate? = nil
+    
     struct Static {
         static let nameTag = "name"
         static let passwordTag = "password"
@@ -80,16 +86,19 @@ class AddMenuItemViewController: FormViewController {
     @IBAction func onSave(_ sender: Any) {
         let menuItem = self.form.formValues()["name"]
         
-        let alertController = UIAlertController(title: "Form output", message: menuItem as! String?, preferredStyle: .alert)
+      //  let alertController = UIAlertController(title: "Form output", message: menuItem as! String?, preferredStyle: .alert)
         
-        let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
-        }
+      //  let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
+      //  }
         
-        alertController.addAction(cancel)
+       // alertController.addAction(cancel)
         
-        self.present(alertController, animated: true, completion: nil)
+      //  self.present(alertController, animated: true, completion: nil)
         Repository().saveMenuItem(menuitem: menuItem as! String)
-        self.navigationController?.popViewController(animated: true);
+        navigationController?.popViewController(animated: true)
+        if let callback = self.delegate{
+            callback.MenuItemAdded(menuItem: menuItem as! String)
+        }
     }
 
     func showAnimate()
