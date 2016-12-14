@@ -179,5 +179,53 @@ class Repository{
         task.resume()
         
     }
+    
+    func removeMenuItem(menuitem : String) {
+        print("saving menu" + menuitem)
+        
+        
+        // let order = "{\"name\": \"Pasta\"}"
+        let order = String(format:"{\"name\": \"\(menuitem)\"}")
+        print(order)
+        let config = URLSessionConfiguration.default // Session Configuration
+        let session = URLSession(configuration: config) // Load configuration into Session
+        var request = URLRequest(url: URL(string: "https://5bsr9e6203.execute-api.us-west-2.amazonaws.com/staging/menuitems")!)
+        request.httpMethod = "DELETE"
+        request.httpBody = order.data(using: .utf8)
+        
+        let task = session.dataTask(with: request, completionHandler: {
+            (data, response, error) in
+            
+            if error != nil {
+                
+                print(error!.localizedDescription)
+                
+            } else {
+                
+                do {
+                    print(data)
+                    if let json = try JSONSerialization.jsonObject(with: data!, options: .allowFragments) as? [String:Any]
+                    {
+                        
+                        //Implement your logic
+                        print(json)
+                    }else{
+                        print("unable to deserialize.")
+                    }
+                    
+                    
+                } catch {
+                    
+                    print("error in JSONSerialization")
+                    
+                }
+                
+                
+            }
+            
+        })
+        task.resume()
+        
+    }
 
 }
