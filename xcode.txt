@@ -1,0 +1,1 @@
+xcode ->if project builds but does not run go to Product and Schema and select project

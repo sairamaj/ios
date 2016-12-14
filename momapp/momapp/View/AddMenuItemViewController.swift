@@ -33,6 +33,14 @@ class AddMenuItemViewController: FormViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        /*let dialogheigth:CGFloat = self.view.frame.height * 0.5;
+        let dialogwidth:CGFloat = self.view.frame.width * 0.5;
+        self.preferredContentSize = CGSize(width: dialogwidth, height: dialogheigth)
+        
+        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
+        self.showAnimate()
+ */
 
         // Do any additional setup after loading the view.
     }
@@ -70,9 +78,9 @@ class AddMenuItemViewController: FormViewController {
     }
     */
     @IBAction func onSave(_ sender: Any) {
-        let message = self.form.formValues()["name"]
+        let menuItem = self.form.formValues()["name"]
         
-        let alertController = UIAlertController(title: "Form output", message: message as! String?, preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Form output", message: menuItem as! String?, preferredStyle: .alert)
         
         let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
         }
@@ -80,6 +88,19 @@ class AddMenuItemViewController: FormViewController {
         alertController.addAction(cancel)
         
         self.present(alertController, animated: true, completion: nil)
+        Repository().saveMenuItem(menuitem: menuItem as! String)
+        self.navigationController?.popViewController(animated: true);
     }
 
-}
+    func showAnimate()
+    {
+  
+        self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
+        self.view.alpha = 0.0;
+        UIView.animate(withDuration: 0.25, animations: {
+            self.view.alpha = 1.0
+            self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
+        });
+    }
+    
+    }

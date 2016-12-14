@@ -10,6 +10,7 @@ import UIKit
 
 class MenuTableViewController: UITableViewController {
 
+    var menuItems:[String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -18,6 +19,20 @@ class MenuTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        Repository().getMenuItems( callback: {
+            (objects) -> Void in
+            
+            
+            for object in objects{
+                self.menuItems.append(object)
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()    // reload in UI thread.
+            }
+            
+        })
     }
 
     override func didReceiveMemoryWarning() {
@@ -29,23 +44,23 @@ class MenuTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.menuItems.count
     }
 
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "menuitemcellid", for: indexPath)
 
-        // Configure the cell...
+        cell.textLabel?.text = menuItems[indexPath.row]
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.
@@ -92,4 +107,13 @@ class MenuTableViewController: UITableViewController {
     }
     */
 
+    @IBAction func onAdd(_ sender: Any) {
+        let popup = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "addmenuitemstoryboard")
+        popup.modalPresentationStyle = UIModalPresentationStyle.popover
+        self.addChildViewController(popup)
+        popup.view.frame = self.view.frame
+        self.view.addSubview(popup.view)
+        popup.didMove(toParentViewController: self)
+        
+    }
 }

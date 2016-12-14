@@ -81,7 +81,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MWD-lS-69d">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menuitemcellid" id="MWD-lS-69d">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MWD-lS-69d" id="y5d-Ga-6cP">
@@ -99,7 +99,8 @@
                     <navigationItem key="navigationItem" title="Title" id="wcT-eE-kwV">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="4dx-IG-RmS">
                             <connections>
-                                <segue destination="RFM-9F-fov" kind="show" id="5xB-Of-OWi"/>
+                                <action selector="onAdd:" destination="9uo-1k-dBY" id="l88-5v-UhN"/>
+                                <segue destination="RFM-9F-fov" kind="show" id="jQ8-VN-jJ5"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -109,10 +110,10 @@
             </objects>
             <point key="canvasLocation" x="1954" y="772"/>
         </scene>
-        <!--Title-->
+        <!--Add Menu Item-->
         <scene sceneID="dwV-s8-Yz7">
             <objects>
-                <tableViewController id="RFM-9F-fov" customClass="AddMenuItemViewController" customModule="momapp" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="addmenuitemstoryboard2" id="RFM-9F-fov" customClass="AddMenuItemViewController" customModule="momapp" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Eyk-2T-Acz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -122,7 +123,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6UA-q4-wGz" id="M0o-0q-dIQ">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -133,7 +134,7 @@
                         </connections>
                     </tableView>
                     <toolbarItems/>
-                    <navigationItem key="navigationItem" title="Title" id="unR-0F-xbq">
+                    <navigationItem key="navigationItem" title="Add Menu Item" id="unR-0F-xbq">
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="Sux-hT-FP5">
                             <connections>
                                 <action selector="onSave:" destination="RFM-9F-fov" id="XmZ-Hp-8Hg"/>
