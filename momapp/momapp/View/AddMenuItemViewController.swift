@@ -16,6 +16,7 @@ protocol MenuItemAddedDelegate{
 class AddMenuItemViewController: FormViewController {
 
     var delegate:MenuItemAddedDelegate? = nil
+    var curentMenuItems:[String] = []
     
     struct Static {
         static let nameTag = "name"
@@ -84,21 +85,33 @@ class AddMenuItemViewController: FormViewController {
     }
     */
     @IBAction func onSave(_ sender: Any) {
+       
+        
+        if self.form.formValues()["name"] == nil {
+            showError(message: "Cannot be empty")
+            return
+        }
+        
         let menuItem = self.form.formValues()["name"]
         
-      //  let alertController = UIAlertController(title: "Form output", message: menuItem as! String?, preferredStyle: .alert)
-        
-      //  let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
-      //  }
-        
-       // alertController.addAction(cancel)
-        
-      //  self.present(alertController, animated: true, completion: nil)
-        Repository().saveMenuItem(menuitem: menuItem as! String)
-        navigationController?.popViewController(animated: true)
-        if let callback = self.delegate{
-            callback.MenuItemAdded(menuItem: menuItem as! String)
+        if menuItem is String{
+            if IsExists(menuItem: menuItem as! String){
+                showError(message: menuItem as! String + "Already exists.")
+                return
+            }
+            //  self.present(alertController, animated: true, completion: nil)
+            Repository().saveMenuItem(menuitem: menuItem as! String)
+            navigationController?.popViewController(animated: true)
+            if let callback = self.delegate{
+                callback.MenuItemAdded(menuItem: menuItem as! String)
+            }
+        }else{
+            showError(message: "Cannot be empty")
+            return
         }
+        
+       
+
     }
 
     func showAnimate()
@@ -110,6 +123,26 @@ class AddMenuItemViewController: FormViewController {
             self.view.alpha = 1.0
             self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
         });
+    }
+    
+    
+    func showError(message:String) -> Void{
+        let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
+            
+        }
+        alertController.addAction(cancel)
+        self.present(alertController, animated: true)
+    }
+    
+    func IsExists(menuItem:String) -> Bool{
+        for item in self.curentMenuItems{
+            if( item.lowercased() == menuItem.lowercased()){
+                return true
+            }
+        }
+        
+        return false
     }
     
     }

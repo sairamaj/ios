@@ -1,0 +1,340 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C8D254561E086791007A1C38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D254551E086790007A1C38 /* AppDelegate.swift */; };
+		C8D254581E086791007A1C38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D254571E086791007A1C38 /* ViewController.swift */; };
+		C8D2545B1E086791007A1C38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D254591E086791007A1C38 /* Main.storyboard */; };
+		C8D2545D1E086791007A1C38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C8D2545C1E086791007A1C38 /* Assets.xcassets */; };
+		C8D254601E086791007A1C38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C8D2545E1E086791007A1C38 /* LaunchScreen.storyboard */; };
+		C8D254691E086972007A1C38 /* MenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D254681E086972007A1C38 /* MenuTableViewController.swift */; };
+		C8D2546C1E086A34007A1C38 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8D2546B1E086A34007A1C38 /* Repository.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C8D254521E086790007A1C38 /* kidapp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = kidapp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C8D254551E086790007A1C38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C8D254571E086791007A1C38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C8D2545A1E086791007A1C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C8D2545C1E086791007A1C38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C8D2545F1E086791007A1C38 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C8D254611E086791007A1C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C8D254681E086972007A1C38 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Views/MenuTableViewController.swift; sourceTree = "<group>"; };
+		C8D2546B1E086A34007A1C38 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Repository/Repository.swift; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C8D2544F1E086790007A1C38 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C8D254491E086790007A1C38 = {
+			isa = PBXGroup;
+			children = (
+				C8D254541E086790007A1C38 /* kidapp */,
+				C8D254531E086790007A1C38 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		C8D254531E086790007A1C38 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C8D254521E086790007A1C38 /* kidapp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C8D254541E086790007A1C38 /* kidapp */ = {
+			isa = PBXGroup;
+			children = (
+				C8D2546A1E0869E4007A1C38 /* Repository */,
+				C8D254671E0868F8007A1C38 /* Views */,
+				C8D254551E086790007A1C38 /* AppDelegate.swift */,
+				C8D254571E086791007A1C38 /* ViewController.swift */,
+				C8D254591E086791007A1C38 /* Main.storyboard */,
+				C8D2545C1E086791007A1C38 /* Assets.xcassets */,
+				C8D2545E1E086791007A1C38 /* LaunchScreen.storyboard */,
+				C8D254611E086791007A1C38 /* Info.plist */,
+			);
+			path = kidapp;
+			sourceTree = "<group>";
+		};
+		C8D254671E0868F8007A1C38 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C8D254681E086972007A1C38 /* MenuTableViewController.swift */,
+			);
+			name = Views;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		C8D2546A1E0869E4007A1C38 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				C8D2546B1E086A34007A1C38 /* Repository.swift */,
+			);
+			name = Repository;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C8D254511E086790007A1C38 /* kidapp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C8D254641E086791007A1C38 /* Build configuration list for PBXNativeTarget "kidapp" */;
+			buildPhases = (
+				C8D2544E1E086790007A1C38 /* Sources */,
+				C8D2544F1E086790007A1C38 /* Frameworks */,
+				C8D254501E086790007A1C38 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = kidapp;
+			productName = kidapp;
+			productReference = C8D254521E086790007A1C38 /* kidapp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C8D2544A1E086790007A1C38 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Sourabh Jamlapuram";
+				TargetAttributes = {
+					C8D254511E086790007A1C38 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Q6F64ULW6Q;
+						ProvisioningStyle = Manual;
+					};
+				};
+			};
+			buildConfigurationList = C8D2544D1E086790007A1C38 /* Build configuration list for PBXProject "kidapp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C8D254491E086790007A1C38;
+			productRefGroup = C8D254531E086790007A1C38 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C8D254511E086790007A1C38 /* kidapp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C8D254501E086790007A1C38 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D254601E086791007A1C38 /* LaunchScreen.storyboard in Resources */,
+				C8D2545D1E086791007A1C38 /* Assets.xcassets in Resources */,
+				C8D2545B1E086791007A1C38 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C8D2544E1E086790007A1C38 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C8D254581E086791007A1C38 /* ViewController.swift in Sources */,
+				C8D254561E086791007A1C38 /* AppDelegate.swift in Sources */,
+				C8D254691E086972007A1C38 /* MenuTableViewController.swift in Sources */,
+				C8D2546C1E086A34007A1C38 /* Repository.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		C8D254591E086791007A1C38 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8D2545A1E086791007A1C38 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C8D2545E1E086791007A1C38 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C8D2545F1E086791007A1C38 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C8D254621E086791007A1C38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C8D254631E086791007A1C38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C8D254651E086791007A1C38 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q6F64ULW6Q;
+				INFOPLIST_FILE = kidapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamalapuram.kidapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b3d70702-33b4-48d1-9828-b49cea76edf2";
+				PROVISIONING_PROFILE_SPECIFIER = kidappprofile;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		C8D254661E086791007A1C38 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Q6F64ULW6Q;
+				INFOPLIST_FILE = kidapp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jamalapuram.kidapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "b3d70702-33b4-48d1-9828-b49cea76edf2";
+				PROVISIONING_PROFILE_SPECIFIER = kidappprofile;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C8D2544D1E086790007A1C38 /* Build configuration list for PBXProject "kidapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D254621E086791007A1C38 /* Debug */,
+				C8D254631E086791007A1C38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C8D254641E086791007A1C38 /* Build configuration list for PBXNativeTarget "kidapp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C8D254651E086791007A1C38 /* Debug */,
+				C8D254661E086791007A1C38 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = C8D2544A1E086790007A1C38 /* Project object */;
+}

@@ -1,0 +1,4 @@
+ios developer
+	register apped ( need under id)
+	device
+	profiler
