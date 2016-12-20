@@ -26,6 +26,7 @@
 		C8D254611E086791007A1C38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C8D254681E086972007A1C38 /* MenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MenuTableViewController.swift; path = Views/MenuTableViewController.swift; sourceTree = "<group>"; };
 		C8D2546B1E086A34007A1C38 /* Repository.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repository.swift; path = Repository/Repository.swift; sourceTree = SOURCE_ROOT; };
+		C8D2546D1E087179007A1C38 /* kidapp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = kidapp.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +59,7 @@
 		C8D254541E086790007A1C38 /* kidapp */ = {
 			isa = PBXGroup;
 			children = (
+				C8D2546D1E087179007A1C38 /* kidapp.entitlements */,
 				C8D2546A1E0869E4007A1C38 /* Repository */,
 				C8D254671E0868F8007A1C38 /* Views */,
 				C8D254551E086790007A1C38 /* AppDelegate.swift */,
@@ -121,6 +123,11 @@
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = Q6F64ULW6Q;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -286,6 +293,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kidapp/kidapp.entitlements;
 				DEVELOPMENT_TEAM = Q6F64ULW6Q;
 				INFOPLIST_FILE = kidapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -302,6 +310,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = kidapp/kidapp.entitlements;
 				DEVELOPMENT_TEAM = Q6F64ULW6Q;
 				INFOPLIST_FILE = kidapp/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -333,6 +342,7 @@
 				C8D254661E086791007A1C38 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
