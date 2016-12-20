@@ -21,22 +21,18 @@ class MenuTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        Repository().getMenuItems( callback: {
-            (objects) -> Void in
-            
-            
-            for object in objects{
-                self.menuItems.append(object)
-            }
-            
-            DispatchQueue.main.async {
-                self.tableView.reloadData()    // reload in UI thread.
-            }
-            
-        })
+        refresh()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(MenuTableViewController.onRefresh), name: NSNotification.Name(rawValue: "refresh"), object: nil)
+
 
     }
 
+    func onRefresh(){
+        print("refrshing")
+        refresh()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -125,5 +121,23 @@ class MenuTableViewController: UITableViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
         alert.addAction(UIAlertAction(title: "Close", style: UIAlertActionStyle.default, handler: nil))
         self.present(alert, animated: true, completion: nil)
+    }
+    
+    func refresh(){
+        self.menuItems.removeAll()
+        Repository().getMenuItems( callback: {
+            (objects) -> Void in
+            
+            
+            for object in objects{
+                self.menuItems.append(object)
+            }
+            
+            DispatchQueue.main.async {
+                self.tableView.reloadData()    // reload in UI thread.
+            }
+            
+        })
+
     }
 }

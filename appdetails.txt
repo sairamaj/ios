@@ -35,6 +35,7 @@ iPhone:9ad68a9ce0a750e252edad2b920c42006629abe008fccb751e5205809eef1391
    - add subscription to this topic ( with protocol as application and endpoint urn as application endpoint arn)
    - test by “publish to topic” 
 
+https://www.appcoda.com/push-notification-ios/
 
 
 

@@ -76,7 +76,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didReceiveRemoteNotification userInfo: [AnyHashable : Any]) {
         print("notification received")
+        // Default printout of userInfo
+        print("All of userInfo:\n\( userInfo)\n")
+        
+        // Print all of userInfo
+        for (key, value) in userInfo {
+            print("userInfo: \(key) —> value = \(value)")
+        }
+        
+        let data = userInfo["aps"] as? [AnyHashable : Any]
+        print(data)
+        print(type(of:data))
+        
+        let body = data?["alert"] as? String
+        print(body)
+        
+        NotificationCenter.default.post(name: NSNotification.Name(rawValue: "refresh"), object: nil)
+        
+        
+        
     }
+    
+
 
 
 }
