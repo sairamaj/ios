@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>67C68A88-DBED-43E8-9FD7-D680C2D44FD1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Scout</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>0F2DFA931432B3B40B366087D62618411D93DA55</key>
+		<string>https://github.com/sairamaj/Scout.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Scout.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>0F2DFA931432B3B40B366087D62618411D93DA55</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/sairamaj/Scout.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>0F2DFA931432B3B40B366087D62618411D93DA55</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>0F2DFA931432B3B40B366087D62618411D93DA55</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Scout</string>
+		</dict>
+	</array>
+</dict>
+</plist>

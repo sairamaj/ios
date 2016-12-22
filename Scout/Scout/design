@@ -1,0 +1,40 @@
+data model
+
+    - Scout
+            Name - String           ( SJ, VK)
+            Team - Number           ( 1111, 2222)
+
+                    Records
+                            SJ  1111
+                            SJ  2222
+                            VK  1111
+    - Tournament
+            Name - String           ( Oregon FTC QT - The Dalles )
+            Date - Date             ( 01/31/15)
+
+    - TournamentMatch
+            Date                - Date (tournament date)
+            Relationship
+                Match
+                Scout
+    - Match
+            Alliance Name           Blue
+            Match Number            1
+            Team1                   1111
+            Team2                   2222
+            RecordedScore           300
+            OfficialScore           320
+            Result                  Won
+            Relations
+                    Team1TaskInfo
+                    Team2TaskInfo
+
+    - TaskInfo
+            TaskData    String task data in CSV format
+
+
+
+OR Tournament schedule
+    http://www.usfirst.org/whats-going-on/events?ProgramCode=FTC&Season=2014&start_date%5Bdate%5D=&end_date%5Bdate%5D=&Country=USA&StateProv=OR&ZipCode=&Radius=&op=Search&form_build_id=form-K4H36zC6aYrnB3aGncfSbj4r5VQicYdFURJcRfRNGzg&form_id=first_search_events_form
+
+

@@ -1,0 +1,1391 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="9y3-UZ-Nuy">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--Title-->
+        <scene sceneID="Uma-h9-UGi">
+            <objects>
+                <tableViewController id="Phx-gt-4Bi" customClass="SavedScoutTableViewController" customModule="Scout" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="40" sectionHeaderHeight="22" sectionFooterHeight="22" id="l41-gj-Aoj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.098063056529999998" green="0.93780531869999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.098063056529999998" green="0.93780531869999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.098063056529999998" green="0.93780531869999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="search for team" id="vKa-9C-WDI">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <textInputTraits key="textInputTraits"/>
+                            <connections>
+                                <outlet property="delegate" destination="Phx-gt-4Bi" id="iiT-xH-FaZ"/>
+                            </connections>
+                        </searchBar>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="matchdatacellidentifier" rowHeight="40" id="bep-xl-rRs" customClass="MatchInfoUITableViewCell" customModule="Scout" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bep-xl-rRs" id="7dZ-Fg-zSQ">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SS" lineBreakMode="clip" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oWv-8d-lsh">
+                                            <rect key="frame" x="208" y="11" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1111" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="htd-7d-FcB">
+                                            <rect key="frame" x="265" y="11" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="2222" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rft-1j-3gs">
+                                            <rect key="frame" x="312" y="11" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="9999" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vQZ-dd-lgT">
+                                            <rect key="frame" x="359" y="11" width="39" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="brL-8A-Sbk">
+                                            <rect key="frame" x="6" y="11" width="76" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Q8K-1D-gWQ">
+                                            <rect key="frame" x="493" y="13" width="22" height="18"/>
+                                            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="1" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </view>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(000/000)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8wk-8Z-gx9">
+                                            <rect key="frame" x="405" y="11" width="86" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMP-3E-YvC" customClass="AllianceUIButton" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="87" y="4" width="35" height="36"/>
+                                            <state key="normal" title="A">
+                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Match" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LNW-TN-a4p">
+                                            <rect key="frame" x="127" y="11" width="73" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.098063056529999998" green="0.93780531869999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <outlet property="alianceIndicatorButton" destination="fMP-3E-YvC" id="dQ7-jY-aP9"/>
+                                    <outlet property="dateCreatedLabel" destination="brL-8A-Sbk" id="DHY-B2-gVJ"/>
+                                    <outlet property="matchNumberLabel" destination="LNW-TN-a4p" id="rrx-B2-q5u"/>
+                                    <outlet property="resultIndicatorView" destination="Q8K-1D-gWQ" id="Oz8-At-J19"/>
+                                    <outlet property="scoutNameLabel" destination="oWv-8d-lsh" id="e5E-PB-yNY"/>
+                                    <outlet property="team1Label" destination="htd-7d-FcB" id="lmy-Ft-M79"/>
+                                    <outlet property="team2Label" destination="Rft-1j-3gs" id="ZCx-18-85c"/>
+                                    <outlet property="teamScoreLabel" destination="vQZ-dd-lgT" id="ZUH-da-lpm"/>
+                                    <outlet property="teamsScoreLabel" destination="8wk-8Z-gx9" id="M2K-hv-S63"/>
+                                    <segue destination="YBH-0I-vNi" kind="show" identifier="totaskseague" id="VNR-Ty-VfI"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Phx-gt-4Bi" id="t5h-7y-KUJ"/>
+                            <outlet property="delegate" destination="Phx-gt-4Bi" id="LN7-6f-Cfm"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="Fvg-X7-4fA"/>
+                    <navigationItem key="navigationItem" title="Title" id="brM-jp-SpV">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="KP8-Ut-9Y4">
+                            <connections>
+                                <segue destination="YBH-0I-vNi" kind="show" id="JLZ-wY-lHm"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="ImX-f7-mIh" id="YWH-NQ-Pis"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qho-F3-MZc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <navigationBar contentMode="scaleToFill" id="umy-Sg-FfW">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <items>
+                        <navigationItem title="Title" id="0vx-GK-lgw"/>
+                    </items>
+                </navigationBar>
+                <searchDisplayController id="ImX-f7-mIh">
+                    <connections>
+                        <outlet property="delegate" destination="Phx-gt-4Bi" id="xk5-BA-kYF"/>
+                        <outlet property="searchBar" destination="vKa-9C-WDI" id="73O-xE-ZEg"/>
+                        <outlet property="searchContentsController" destination="Phx-gt-4Bi" id="qSY-4i-ZZg"/>
+                        <outlet property="searchResultsDataSource" destination="Phx-gt-4Bi" id="TZh-DG-dJD"/>
+                        <outlet property="searchResultsDelegate" destination="Phx-gt-4Bi" id="ZXe-0a-aNc"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="1610" y="598"/>
+        </scene>
+        <!--Score-->
+        <scene sceneID="5Wy-Vy-zgK">
+            <objects>
+                <tableViewController id="YBH-0I-vNi" customClass="TaskTableViewController" customModule="Scout" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="4ut-bq-BAs">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationLevel="2" indentationWidth="10" reuseIdentifier="matchcellidentifier" rowHeight="78" id="e4n-xX-C4z" customClass="MatchUITableViewCell" customModule="Scout" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e4n-xX-C4z" id="TPh-lq-UMy">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u4Z-qh-NeN" userLabel="Divider">
+                                            <rect key="frame" x="475" y="0.0" width="2" height="150"/>
+                                            <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="2" id="65M-RD-M59"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="2" id="z6x-xX-Qmq"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team1" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hK5-rp-2fy" userLabel="Team1_Number_TextBox">
+                                            <rect key="frame" x="399" y="15" width="59" height="30"/>
+                                            <accessibility key="accessibilityConfiguration" hint="Team1"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="RBb-zy-nIG"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <action selector="onTeam1NumberEdited:" destination="e4n-xX-C4z" eventType="editingChanged" id="T5s-Is-sgD"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team2" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="61a-jG-YUf" userLabel="Team2_Number_TextBox">
+                                            <rect key="frame" x="518" y="15" width="59" height="30"/>
+                                            <accessibility key="accessibilityConfiguration" hint="Team2"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="KeE-0N-zdM"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <action selector="onTeam2NumberEdited:" destination="e4n-xX-C4z" eventType="editingChanged" id="aBB-9d-Q1P"/>
+                                            </connections>
+                                        </textField>
+                                        <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcA-Jw-qpz" customClass="AllianceUIButton" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="32" y="9" width="36" height="36"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <state key="normal" title="A">
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <connections>
+                                                <action selector="onAllianceIndicatorButton:" destination="e4n-xX-C4z" eventType="touchUpInside" id="MEz-bA-ohD"/>
+                                            </connections>
+                                        </button>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Match" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GSv-Xh-MNL" userLabel="Match_Number_TextBox">
+                                            <rect key="frame" x="94" y="12" width="116" height="30"/>
+                                            <accessibility key="accessibilityConfiguration" hint="Match"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="110" id="0zD-gV-BcX"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <action selector="onMatchNumberEdited:" destination="e4n-xX-C4z" eventType="editingChanged" id="ob7-O0-Lfc"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="u4Z-qh-NeN" firstAttribute="leading" secondItem="hK5-rp-2fy" secondAttribute="trailing" constant="28" id="24B-5G-vQn"/>
+                                        <constraint firstAttribute="trailing" secondItem="u4Z-qh-NeN" secondAttribute="trailing" constant="123" id="IPx-EG-RXB"/>
+                                        <constraint firstAttribute="centerX" secondItem="GSv-Xh-MNL" secondAttribute="centerX" id="RBC-8u-fL1"/>
+                                        <constraint firstAttribute="trailing" secondItem="61a-jG-YUf" secondAttribute="trailing" constant="20" id="bbi-1B-N1B"/>
+                                        <constraint firstItem="GSv-Xh-MNL" firstAttribute="leading" secondItem="VcA-Jw-qpz" secondAttribute="trailing" constant="10" id="vbZ-fv-RCW"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.94764837562455606" green="1" blue="0.58442954697182947" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Name" value="Match"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="AllianceIndicatorButton" destination="VcA-Jw-qpz" id="zD4-oI-kXa"/>
+                                    <outlet property="MatchNumber" destination="GSv-Xh-MNL" id="m9l-2a-AW9"/>
+                                    <outlet property="Team1Number" destination="hK5-rp-2fy" id="bpI-ik-dA8"/>
+                                    <outlet property="Team2Number" destination="61a-jG-YUf" id="qkj-uM-4Pc"/>
+                                    <outlet property="deviderLabel" destination="u4Z-qh-NeN" id="NxG-gt-2hp"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationLevel="13" indentationWidth="10" reuseIdentifier="autonomouscellidentifier" rowHeight="63" id="qJk-47-0Fn" customClass="AutonomousTableViewCell" customModule="Scout" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qJk-47-0Fn" id="HfN-xF-9y5">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Off Ramp" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPs-bl-6m5">
+                                            <rect key="frame" x="14" y="10" width="96" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y2I-82-Hat">
+                                            <rect key="frame" x="14" y="49" width="166" height="41"/>
+                                            <string key="text">Kickstand 
+Released</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="D6B-Tx-CEX" userLabel="Team1_KickstandReleased_Switch" customClass="TaskUISwitch" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="398" y="49" width="51" height="31"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="AutonomousKickstandReleased"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskSwitchChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="csf-Ei-n3R"/>
+                                            </connections>
+                                        </switch>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="v9M-km-RcG" userLabel="Team1_OffRamp_Switch" customClass="TaskUISwitch" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="398" y="5" width="51" height="31"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="AutonomousOffRamp"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskSwitchChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="Igm-9y-xD6"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Center Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtI-Lt-alM">
+                                            <rect key="frame" x="14" y="98" width="110" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Parking" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pah-y3-ggG">
+                                            <rect key="frame" x="14" y="183" width="59" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="qPj-yG-ahe" userLabel="Team1_BallInCenterGoal_Switch" customClass="TaskUISwitch" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="398" y="98" width="51" height="31"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="BallInCenterGoal"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskSwitchChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="eQD-T5-RZO"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ball in Rolling Goals" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnw-gN-8mr">
+                                            <rect key="frame" x="14" y="145" width="154" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xa1-Zy-F7x" userLabel="Team2_BallInGoals_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="494" y="183" width="9" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="RollingGoalsInParking"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="PET-yZ-hUG" userLabel="Team1_BallInGoals_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="379" y="179" width="94" height="29"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="RollingGoalsInParking"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="l2v-R8-u6l"/>
+                                            </connections>
+                                        </stepper>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Su8-iV-cAZ" userLabel="Team2_BallInCenterGoal_Switch" customClass="TaskUISwitch" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="533" y="93" width="51" height="31"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="BallInCenterGoal"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskSwitchChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="zve-fb-fft"/>
+                                            </connections>
+                                        </switch>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="QJM-Tj-01B" userLabel="Team1_RollingGoalsInParking_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="379" y="141" width="94" height="29"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="BallInGoals"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="edD-SW-cxf"/>
+                                            </connections>
+                                        </stepper>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="GZy-cj-tCo" userLabel="Team2_BallInGoals_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="503" y="179" width="94" height="29"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="RollingGoalsInParking"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="3Y4-uz-9AJ"/>
+                                            </connections>
+                                        </stepper>
+                                        <label clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OtN-cH-Wtx" userLabel="Divider">
+                                            <rect key="frame" x="475" y="-31" width="2" height="300"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="2" id="LR5-cK-W5g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="dZm-gQ-S8L" userLabel="Team2_OffRamp_Switch" customClass="TaskUISwitch" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="533" y="2" width="51" height="31"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="AutonomousOffRamp"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskSwitchChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="JOH-ZK-2GU"/>
+                                            </connections>
+                                        </switch>
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="bvf-jQ-zKH" userLabel="Team2_KickstandReleased_Switch" customClass="TaskUISwitch" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="533" y="49" width="51" height="31"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="AutonomousKickstandReleased"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskSwitchChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="imT-0H-SPI"/>
+                                            </connections>
+                                        </switch>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-jO-q5g" userLabel="Team1_BallInGoals_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="370" y="183" width="9" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="RollingGoalsInParking"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kf3-fJ-tO1" userLabel="Team2_RollingGoalsInParking_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="494" y="145" width="9" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="BallInGoals"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fPM-dC-YMV" userLabel="Team2_RollingGoalsInParking_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="503" y="141" width="94" height="29"/>
+                                            <rect key="contentStretch" x="0.0" y="0.70000000000000007" width="0.69999999999999973" height="0.69999999999999973"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="BallInGoals"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="qJk-47-0Fn" eventType="valueChanged" id="u1A-Se-fUb"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bGN-Za-F79" userLabel="Team1_RollingGoalsInParking_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="370" y="145" width="9" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="BallInGoals"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="pah-y3-ggG" firstAttribute="leading" secondItem="HfN-xF-9y5" secondAttribute="leading" constant="10" id="6TQ-sR-mKC"/>
+                                        <constraint firstAttribute="trailing" secondItem="GZy-cj-tCo" secondAttribute="trailing" constant="14" id="9ow-KS-kfp"/>
+                                        <constraint firstItem="FtI-Lt-alM" firstAttribute="leading" secondItem="HfN-xF-9y5" secondAttribute="leading" constant="10" id="DAt-kA-Jj1"/>
+                                        <constraint firstItem="QJM-Tj-01B" firstAttribute="leading" secondItem="bGN-Za-F79" secondAttribute="trailing" id="EIY-dS-tfA"/>
+                                        <constraint firstAttribute="trailing" secondItem="Su8-iV-cAZ" secondAttribute="trailing" constant="20" id="GGg-Df-V4t"/>
+                                        <constraint firstItem="rnw-gN-8mr" firstAttribute="leading" secondItem="HfN-xF-9y5" secondAttribute="leading" constant="10" id="IAf-ZB-4rc"/>
+                                        <constraint firstItem="PET-yZ-hUG" firstAttribute="leading" secondItem="FSC-jO-q5g" secondAttribute="trailing" id="Jc0-pG-8TK"/>
+                                        <constraint firstItem="OtN-cH-Wtx" firstAttribute="leading" secondItem="qPj-yG-ahe" secondAttribute="trailing" constant="28" id="MCf-jL-OwL"/>
+                                        <constraint firstItem="OtN-cH-Wtx" firstAttribute="leading" secondItem="PET-yZ-hUG" secondAttribute="trailing" constant="17" id="NKw-0V-1fQ"/>
+                                        <constraint firstAttribute="trailing" secondItem="OtN-cH-Wtx" secondAttribute="trailing" constant="123" id="NvJ-Wt-46E"/>
+                                        <constraint firstItem="GZy-cj-tCo" firstAttribute="leading" secondItem="Xa1-Zy-F7x" secondAttribute="trailing" id="Rbk-4L-LAV"/>
+                                        <constraint firstAttribute="trailing" secondItem="dZm-gQ-S8L" secondAttribute="trailing" constant="20" id="Sfy-e6-NI2"/>
+                                        <constraint firstItem="OtN-cH-Wtx" firstAttribute="leading" secondItem="v9M-km-RcG" secondAttribute="trailing" constant="28" id="Sri-cg-1ou"/>
+                                        <constraint firstItem="OtN-cH-Wtx" firstAttribute="leading" secondItem="D6B-Tx-CEX" secondAttribute="trailing" constant="28" id="W1C-9k-1sS"/>
+                                        <constraint firstItem="Y2I-82-Hat" firstAttribute="leading" secondItem="HfN-xF-9y5" secondAttribute="leading" constant="10" id="Y6k-Y3-Nuu"/>
+                                        <constraint firstAttribute="trailing" secondItem="fPM-dC-YMV" secondAttribute="trailing" constant="14" id="bCd-0m-2nL"/>
+                                        <constraint firstItem="DPs-bl-6m5" firstAttribute="leading" secondItem="HfN-xF-9y5" secondAttribute="leading" constant="10" id="f9H-pt-zHF"/>
+                                        <constraint firstAttribute="trailing" secondItem="bvf-jQ-zKH" secondAttribute="trailing" constant="20" id="kN5-3Q-4gi"/>
+                                        <constraint firstItem="OtN-cH-Wtx" firstAttribute="leading" secondItem="QJM-Tj-01B" secondAttribute="trailing" constant="17" id="n3t-bE-ut8"/>
+                                        <constraint firstItem="fPM-dC-YMV" firstAttribute="leading" secondItem="Kf3-fJ-tO1" secondAttribute="trailing" id="ynl-kH-clu"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.61415907525307945" green="1" blue="0.84609199559100734" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Name" value="Autonomous"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="deviderLabel" destination="OtN-cH-Wtx" id="sd7-bP-5gj"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="teleopcellidentifier" rowHeight="128" id="51h-hZ-Gbo" customClass="TeleOpUITableViewCell" customModule="Scout" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="51h-hZ-Gbo" id="N76-4y-kIB">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="30 CM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oVh-Ac-5HL">
+                                            <rect key="frame" x="24" y="9" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="60 CM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sk-iF-M1T">
+                                            <rect key="frame" x="24" y="48" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="90 CM" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hv0-WF-LQe">
+                                            <rect key="frame" x="24" y="88" width="52" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Dar-UY-Utl" userLabel="Team2_TeleOpRoallingGoal30CM_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="531" y="6" width="49" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="gXn-D8-i1H"/>
+                                                <constraint firstAttribute="width" constant="59" id="nEG-CX-odn"/>
+                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="49" id="sLT-Vg-VPt"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="TeleOpRoallingGoal30CM"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="51h-hZ-Gbo" eventType="editingChanged" id="QdV-sb-OTF"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fgg-4T-9C4" userLabel="Team2_TeleOpRoallingGoal60CM_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="531" y="44" width="49" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="Jpm-BU-OQV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="TeleOpRoallingGoal60CM"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="51h-hZ-Gbo" eventType="editingChanged" id="qGT-m3-PiR"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z6g-kk-Uer" userLabel="Team1_TeleOpRoallingGoal30CM_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="377" y="6" width="70" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="L74-vB-fdf"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="TeleOpRoallingGoal30CM"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="51h-hZ-Gbo" eventType="editingChanged" id="Q6i-MC-n1o"/>
+                                            </connections>
+                                        </textField>
+                                        <label clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Svm-ku-oKI" userLabel="Divider">
+                                            <rect key="frame" x="475" y="-31" width="2" height="229"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="2" id="0Gt-Ef-Rj9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEF-mJ-gTw" userLabel="Team2_TeleOpRoallingGoal90CM_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="531" y="84" width="49" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="PUE-bw-nf9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="TeleOpRoallingGoal90CM"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="51h-hZ-Gbo" eventType="editingChanged" id="KUM-eF-wfJ"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YLX-SG-baw" userLabel="Team1_TeleOpRoallingGoal90CM_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="398" y="84" width="49" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="uv0-Sc-6eh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="TeleOpRoallingGoal90CM"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="51h-hZ-Gbo" eventType="editingChanged" id="kgq-hC-e77"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mdW-jC-04d" userLabel="Team1_TeleOpRoallingGoal60CM_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="398" y="44" width="49" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="WAL-Sf-VIk"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="TeleOpRoallingGoal60CM"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="51h-hZ-Gbo" eventType="editingChanged" id="skk-6D-M4e"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="Svm-ku-oKI" secondAttribute="trailing" constant="123" id="14t-tn-EVV"/>
+                                        <constraint firstItem="Svm-ku-oKI" firstAttribute="leading" secondItem="mdW-jC-04d" secondAttribute="trailing" constant="28" id="6LY-eW-br9"/>
+                                        <constraint firstItem="Hv0-WF-LQe" firstAttribute="leading" secondItem="N76-4y-kIB" secondAttribute="leading" constant="10" id="HWl-Jr-fx2"/>
+                                        <constraint firstAttribute="trailing" secondItem="BEF-mJ-gTw" secondAttribute="trailing" constant="20" id="TeS-5Y-Daf"/>
+                                        <constraint firstItem="Svm-ku-oKI" firstAttribute="leading" secondItem="Z6g-kk-Uer" secondAttribute="trailing" constant="28" id="VU1-aK-9oO"/>
+                                        <constraint firstAttribute="trailing" secondItem="Dar-UY-Utl" secondAttribute="trailing" constant="20" id="XXH-ke-sKy"/>
+                                        <constraint firstItem="Svm-ku-oKI" firstAttribute="leading" secondItem="YLX-SG-baw" secondAttribute="trailing" constant="28" id="XnJ-4M-ZMf"/>
+                                        <constraint firstAttribute="trailing" secondItem="fgg-4T-9C4" secondAttribute="trailing" constant="20" id="ZYF-TA-sq4"/>
+                                        <constraint firstItem="oVh-Ac-5HL" firstAttribute="leading" secondItem="N76-4y-kIB" secondAttribute="leading" constant="10" id="aFe-5b-jpM"/>
+                                        <constraint firstItem="8sk-iF-M1T" firstAttribute="leading" secondItem="N76-4y-kIB" secondAttribute="leading" constant="10" id="xRm-oi-rUt"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.25543223808016191" green="1" blue="0.67995892621527498" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Name" value="Tele-Op"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="deviderLabel" destination="Svm-ku-oKI" id="oUh-9k-ckP"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="endgamecellidentifier" rowHeight="56" id="TVV-VO-rod" customClass="EndGameUITableViewCell" customModule="Scout" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TVV-VO-rod" id="vag-rm-MWU">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1x7-NC-0f5">
+                                            <rect key="frame" x="28" y="8" width="102" height="41"/>
+                                            <string key="text">Parking 
+Zone</string>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Off Floor" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P6b-Gs-FN9">
+                                            <rect key="frame" x="28" y="56" width="67" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Center Goal" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oue-j4-CLV">
+                                            <rect key="frame" x="28" y="96" width="93" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L30-IP-CuM" userLabel="Team1_BallsInCenterGoal_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="403" y="96" width="55" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="7Ze-up-PpL"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameBallsInCenterGoal"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="TVV-VO-rod" eventType="editingChanged" id="5cW-e1-Py6"/>
+                                            </connections>
+                                        </textField>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="Ew6-4P-gsA" userLabel="Team1_RollingGoalsInParkingZone_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="364" y="8" width="94" height="29"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameRollingGoalsInParkingZone"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="TVV-VO-rod" eventType="valueChanged" id="Zld-ow-4a5"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqo-Bv-ZUc" userLabel="Team1_GoalsOffFloor_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="355" y="56" width="10" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameGoalsOffFloor"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="fMt-wh-DbI" userLabel="Team1_GoalsOffFloor_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="364" y="52" width="94" height="29"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameGoalsOffFloor"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="TVV-VO-rod" eventType="valueChanged" id="pIa-Id-taF"/>
+                                            </connections>
+                                        </stepper>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Height" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JV5-t3-Mck" userLabel="Team2_BallsInCenterGoal_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="537" y="96" width="55" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="59" id="Z5g-Jb-gPr"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameBallsInCenterGoal"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="TVV-VO-rod" eventType="editingChanged" id="8Jy-b2-NnH"/>
+                                            </connections>
+                                        </textField>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="0zD-bQ-ev9" userLabel="Team2_RollingGoalsInParkingZone_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="498" y="8" width="94" height="29"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameRollingGoalsInParkingZone"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="TVV-VO-rod" eventType="valueChanged" id="sy6-mB-NI7"/>
+                                            </connections>
+                                        </stepper>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="n9o-Kb-a5E" userLabel="Team2_GoalsOffFloor_Stepper" customClass="TaskUIStepper" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="498" y="52" width="94" height="29"/>
+                                            <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameGoalsOffFloor"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskStepperValueChanged:" destination="TVV-VO-rod" eventType="valueChanged" id="h5i-Zk-Prh"/>
+                                            </connections>
+                                        </stepper>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dv9-Yd-l4r" userLabel="Team2_GoalsOffFloor_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="490" y="56" width="10" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameGoalsOffFloor"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label clipsSubviews="YES" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Y5-Lr-LAp" userLabel="Divider">
+                                            <rect key="frame" x="475" y="-55" width="5" height="223"/>
+                                            <color key="backgroundColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="tintColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="2" id="KUF-W3-nty"/>
+                                                <constraint firstAttribute="height" constant="189" id="Qkh-1I-S4A"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="highlightedColor" red="0.60000002379999995" green="0.40000000600000002" blue="0.20000000300000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yif-sI-cD8" userLabel="Team1_RollingGoalsInParkingZone_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="354" y="12" width="10" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameRollingGoalsInParkingZone"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b1B-Wh-P2E" userLabel="Team2_RollingGoalsInParkingZone_Label" customClass="TaskUILabel" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="489" y="12" width="10" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="EndGameRollingGoalsInParkingZone"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="5Y5-Lr-LAp" secondAttribute="trailing" constant="123" id="66a-CB-pgE"/>
+                                        <constraint firstItem="5Y5-Lr-LAp" firstAttribute="leading" secondItem="fMt-wh-DbI" secondAttribute="trailing" constant="17" id="HGJ-mi-DSf"/>
+                                        <constraint firstItem="1x7-NC-0f5" firstAttribute="leading" secondItem="vag-rm-MWU" secondAttribute="leading" constant="10" id="MHO-M9-aBH"/>
+                                        <constraint firstAttribute="trailing" secondItem="n9o-Kb-a5E" secondAttribute="trailing" constant="14" id="Rb1-Zr-fxw"/>
+                                        <constraint firstItem="P6b-Gs-FN9" firstAttribute="leading" secondItem="vag-rm-MWU" secondAttribute="leading" constant="10" id="Xx6-rw-ql2"/>
+                                        <constraint firstItem="5Y5-Lr-LAp" firstAttribute="leading" secondItem="L30-IP-CuM" secondAttribute="trailing" constant="17" id="Y0W-iS-TbI"/>
+                                        <constraint firstAttribute="trailing" secondItem="0zD-bQ-ev9" secondAttribute="trailing" constant="14" id="faZ-zR-B0k"/>
+                                        <constraint firstItem="fMt-wh-DbI" firstAttribute="leading" secondItem="rqo-Bv-ZUc" secondAttribute="trailing" constant="1" id="lGc-Ao-Tri"/>
+                                        <constraint firstItem="Oue-j4-CLV" firstAttribute="leading" secondItem="vag-rm-MWU" secondAttribute="leading" constant="10" id="lfX-jb-gB2"/>
+                                        <constraint firstItem="n9o-Kb-a5E" firstAttribute="leading" secondItem="Dv9-Yd-l4r" secondAttribute="trailing" constant="-2" id="oaG-oF-ohW"/>
+                                        <constraint firstItem="Ew6-4P-gsA" firstAttribute="leading" secondItem="Yif-sI-cD8" secondAttribute="trailing" constant="1" id="shm-9f-WEt"/>
+                                        <constraint firstItem="5Y5-Lr-LAp" firstAttribute="leading" secondItem="Ew6-4P-gsA" secondAttribute="trailing" constant="17" id="uoS-By-4tP"/>
+                                        <constraint firstItem="0zD-bQ-ev9" firstAttribute="leading" secondItem="b1B-Wh-P2E" secondAttribute="trailing" constant="-1" id="xYp-lJ-nMw"/>
+                                        <constraint firstAttribute="trailing" secondItem="JV5-t3-Mck" secondAttribute="trailing" constant="20" id="y92-Tz-DxJ"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.90814670133483899" blue="0.23840353850716145" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Name" value="End Game"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="deviderLabel" destination="5Y5-Lr-LAp" id="X18-Ge-YmZ"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="generalcellidentifier" rowHeight="56" id="2Bs-Op-ibw" customClass="GeneralUITableViewCell" customModule="Scout" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Bs-Op-ibw" id="TaB-PI-fwM">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Comment" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZ2-rd-IqC">
+                                            <rect key="frame" x="33" y="56" width="85" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Penalty ( for information only)" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PNY-FQ-EM1">
+                                            <rect key="frame" x="33" y="8" width="224" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" text="commentbox" translatesAutoresizingMaskIntoConstraints="NO" id="7Td-xE-5Uw" userLabel="CommentBox">
+                                            <rect key="frame" x="144" y="56" width="313" height="106"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="r5A-2T-xLJ" userLabel="Team2_Penalty_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="535" y="9" width="57" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="57" id="o98-f1-wax"/>
+                                            </constraints>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="Penalty"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="2Bs-Op-ibw" eventType="editingChanged" id="SCe-yk-8se"/>
+                                            </connections>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dWB-x0-5GB" userLabel="Team1_Penalty_TextBox" customClass="TaskUITextField" customModule="Scout" customModuleProvider="target">
+                                            <rect key="frame" x="389" y="8" width="57" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="57" id="xAl-cD-3Tb"/>
+                                            </constraints>
+                                            <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="taskName" value="Penalty"/>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="teamNumber">
+                                                    <integer key="value" value="0"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <action selector="onTaskTextBoxChanged:" destination="2Bs-Op-ibw" eventType="editingChanged" id="YlR-2W-Iud"/>
+                                            </connections>
+                                        </textField>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="PNY-FQ-EM1" firstAttribute="leading" secondItem="TaB-PI-fwM" secondAttribute="leading" constant="10" id="20C-hM-hkw"/>
+                                        <constraint firstAttribute="centerX" secondItem="7Td-xE-5Uw" secondAttribute="centerX" id="Zsm-GM-TE8"/>
+                                        <constraint firstAttribute="trailing" secondItem="r5A-2T-xLJ" secondAttribute="trailing" constant="20" id="aET-Jb-KuC"/>
+                                        <constraint firstAttribute="trailing" secondItem="dWB-x0-5GB" secondAttribute="trailing" constant="140" id="cCO-s6-KB1"/>
+                                        <constraint firstItem="SZ2-rd-IqC" firstAttribute="leading" secondItem="TaB-PI-fwM" secondAttribute="leading" constant="10" id="eAr-G0-xL8"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.33574327654569458" green="1" blue="0.91252422717898363" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Name" value="General"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="CommentBox" destination="7Td-xE-5Uw" id="bbD-5X-FzA"/>
+                                </connections>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="officialcellidentifier" rowHeight="224" id="BYF-Xb-oMZ" customClass="OfficalTableViewCell" customModule="Scout" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="BYF-Xb-oMZ" id="lpj-SM-kNW">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Score" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jZP-xF-bGs">
+                                            <rect key="frame" x="19" y="18" width="45" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Result" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QbT-EQ-TN7">
+                                            <rect key="frame" x="19" y="65" width="49" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OCb-sQ-v18" userLabel="OfficialScore_TextField">
+                                            <rect key="frame" x="82" y="14" width="57" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="57" id="c26-gY-eq0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                            <connections>
+                                                <action selector="ScoreTextFieldEditchanged:" destination="BYF-Xb-oMZ" eventType="editingChanged" id="6dj-YG-hNB"/>
+                                            </connections>
+                                        </textField>
+                                        <pickerView contentMode="scaleToFill" fixedFrame="YES" showsSelectionIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GHc-oB-tym" userLabel="Result_Picker">
+                                            <rect key="frame" x="147" y="-8" width="60" height="162"/>
+                                        </pickerView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="jZP-xF-bGs" firstAttribute="leading" secondItem="lpj-SM-kNW" secondAttribute="leading" constant="10" id="Qe9-Ab-f0n"/>
+                                        <constraint firstItem="QbT-EQ-TN7" firstAttribute="leading" secondItem="lpj-SM-kNW" secondAttribute="leading" constant="10" id="ffb-tR-8Z6"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.18921308551563942" green="0.50645973182089254" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="Name" value="Official"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="resultPicker" destination="GHc-oB-tym" id="e79-WD-dcU"/>
+                                    <outlet property="scoreTextField" destination="OCb-sQ-v18" id="YAI-eu-VvU"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="YBH-0I-vNi" id="LJO-Dp-TqV"/>
+                            <outlet property="delegate" destination="YBH-0I-vNi" id="yOa-Ht-YuU"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Score" id="JAI-r0-aHv">
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="HYE-aI-gfZ">
+                            <connections>
+                                <action selector="onDone:" destination="YBH-0I-vNi" id="N9f-VR-iln"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htj-aI-WGp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2217" y="-265"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="bG0-P2-A8a">
+            <objects>
+                <tableViewController clearsSelectionOnViewWillAppear="NO" id="g06-pD-bvx" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="wA9-Ov-bSA">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ti5-SA-cuR">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ti5-SA-cuR" id="VyA-Vv-Anz">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="g06-pD-bvx" id="OQE-BS-akb"/>
+                            <outlet property="delegate" destination="g06-pD-bvx" id="0x2-EA-JnT"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="Fwr-fL-VDX"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DAk-G2-aiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4181" y="304"/>
+        </scene>
+        <!--Task Section View Controller-->
+        <scene sceneID="nlV-1U-33u">
+            <objects>
+                <viewController storyboardIdentifier="tasksectionviewcontrollerid" id="4WZ-Ml-wRQ" customClass="TaskSectionViewController" customModule="Scout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ehf-rF-PX7"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vy1-RK-pdR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Lov-IS-pvj">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aNf-eH-ioF" userLabel="BackgroundLabel">
+                                <rect key="frame" x="0.0" y="0.0" width="1600" height="20"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Section name here" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tet-yM-Mzl" userLabel="SectionNameLabel">
+                                <rect key="frame" x="228" y="0.0" width="144" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rXe-xQ-bbc" userLabel="Devider">
+                                <rect key="frame" x="475" y="0.0" width="2" height="27"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="2" id="rKk-cz-bo4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="T10" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnf-Aa-HJq" userLabel="T10">
+                                <rect key="frame" x="435" y="0.0" width="29" height="21"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="T20" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ujr-bY-Eje" userLabel="T20">
+                                <rect key="frame" x="491" y="0.0" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ujr-bY-Eje" secondAttribute="trailing" constant="20" id="0jK-XO-cub"/>
+                            <constraint firstAttribute="centerX" secondItem="Tet-yM-Mzl" secondAttribute="centerX" id="9vF-IG-bCX"/>
+                            <constraint firstAttribute="trailing" secondItem="rXe-xQ-bbc" secondAttribute="trailing" constant="123" id="N6A-bm-zA8"/>
+                            <constraint firstAttribute="trailing" secondItem="Wnf-Aa-HJq" secondAttribute="trailing" constant="146" id="itu-HX-SuG"/>
+                        </constraints>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="600" height="600"/>
+                    <connections>
+                        <outlet property="dividierLabel" destination="rXe-xQ-bbc" id="M1c-o8-ah2"/>
+                        <outlet property="nameLabel" destination="Tet-yM-Mzl" id="yz8-b2-gkJ"/>
+                        <outlet property="team1ScoreLabel" destination="Wnf-Aa-HJq" id="tb7-US-hiX"/>
+                        <outlet property="team2ScoreLabel" destination="ujr-bY-Eje" id="OKl-1k-qKc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Jr1-Qo-eKC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="208" y="362"/>
+        </scene>
+        <!--Saved-->
+        <scene sceneID="836-Uq-BOE">
+            <objects>
+                <navigationController id="rtV-zx-hEf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Saved" id="nRe-3J-jlw"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="6Iv-z5-p6l">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Phx-gt-4Bi" kind="relationship" relationship="rootViewController" id="N63-pC-2b9"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gkZ-vZ-hqr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="721" y="614"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="57m-3k-D84">
+            <objects>
+                <navigationController id="iaE-ga-res" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="YYV-fT-QBl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="FG6-Dk-vm7" kind="show" id="OZR-M6-hR3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UI-zV-7u6" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1064" y="-9"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="AU1-N6-TRe">
+            <objects>
+                <viewController storyboardIdentifier="abouttableviewidentifier" id="FG6-Dk-vm7" customClass="AboutTableViewController" customModule="Scout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ZPe-W6-bak"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vuw-mR-sUF"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="wFo-Jd-oaK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="dXc-Cd-k9d">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" red="0.098063056529999998" green="0.93780531869999995" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="aboutimagecellidentifier" rowHeight="209" id="Gpe-n2-0Ih">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Gpe-n2-0Ih" id="TxR-2r-Xh8">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Afoofa.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="y1X-mT-SXW">
+                                                    <rect key="frame" x="266" y="22" width="135" height="135"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.18460519380000001" green="0.90939331020000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="textviewcellidentifier" rowHeight="191" id="T8m-w3-X32">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="T8m-w3-X32" id="0V2-yn-Y4f">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ju3-gv-RRv">
+                                                    <rect key="frame" x="0.0" y="8" width="600" height="367"/>
+                                                    <color key="backgroundColor" red="0.18460519380000001" green="0.90939331020000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <mutableString key="text">    Team AFOOFA (http://www.teamafoofa.org/)  is a FTC robotics team from Portland, OR that was started in 2006. The name stands for All For One One For All. 
+   This app has been specifically designed for 2014 - 2015 Cascade Effect challenge, to help all FTC teams scout more smartly using their smartphones and tablets for potential alliance partners during tournaments. It is unique in several ways:                1) The way it  keeps track of match scores by an alliance as well as by the individual teams in an alliance. 
+  2) The way it tracks score breakdowns for both autonomous and tele-op rounds. 
+  3) The way it collates data from several scouts within a team, to provide a more complete picture. The information from the app can give the scouting team the wide and deep analytics to help them make fast data driven decisions during a match. 
+      We plan to add several more features during the course of the tournament. We hope you enjoy using it! All the best!!                                  
+ Developers 
+Akhil Kambhammettu &amp; Sneha Malineni
+Mentor 
+Sairama Jamalapuram     </mutableString>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                                </textView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.18460519380000001" green="0.90939331020000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FG6-Dk-vm7" id="wz2-xK-tqm"/>
+                                    <outlet property="delegate" destination="FG6-Dk-vm7" id="889-x3-bLS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.18460519380000001" green="0.90939331020000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="dXc-Cd-k9d" secondAttribute="centerX" id="1S2-5k-EXI"/>
+                        </constraints>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="About" id="QEg-wL-A6Q">
+                        <barButtonItem key="leftBarButtonItem" image="menu-button.png" id="vUs-rx-Cex">
+                            <connections>
+                                <action selector="onMenu:" destination="FG6-Dk-vm7" id="KTw-Ax-cWd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="tableView" destination="dXc-Cd-k9d" id="yJl-yu-QxT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b6b-Ik-Rcf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-746" y="-683"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="faR-WE-il3">
+            <objects>
+                <viewController id="9y3-UZ-Nuy" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="7Jl-6u-Wit"/>
+                        <viewControllerLayoutGuide type="bottom" id="Uyb-rs-G7J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YZ3-hn-ewK">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRL-fN-nUd">
+                                <rect key="frame" x="74" y="28" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="QzF-Gw-goC">
+                        <barButtonItem key="leftBarButtonItem" image="menu-button.png" id="m0O-bK-3mf">
+                            <connections>
+                                <action selector="onMenu:" destination="zDg-mK-JoU" id="Ite-x7-I0i"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Go" id="C2Z-cC-ap9"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yup-9E-ikn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="-1382"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="3ig-eE-6kV">
+            <objects>
+                <viewController storyboardIdentifier="CenterViewController" id="zDg-mK-JoU" customClass="MatchGatheringDetailsViewController" customModule="Scout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Wdc-T1-HyX"/>
+                        <viewControllerLayoutGuide type="bottom" id="yQY-oO-Emy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tAm-iR-9DW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Scout" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="go2-t3-qDL" userLabel="ScoutName_TextField">
+                                <rect key="frame" x="61" y="151" width="217" height="30"/>
+                                <accessibility key="accessibilityConfiguration" hint="Scout Name"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Team No" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vi4-vN-AdP" userLabel="TeamAssociated_TextField">
+                                <rect key="frame" x="61" y="72" width="217" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                <connections>
+                                    <action selector="onTeamNumberChanged:" destination="zDg-mK-JoU" eventType="editingChanged" id="HS7-de-6l7"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Tournament name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mt9-cO-ssA" userLabel="Tournament_TextField">
+                                <rect key="frame" x="61" y="242" width="217" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="206" id="Fyk-TQ-ICq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d4P-w0-pPu" userLabel="Tournament_PickerView">
+                                <rect key="frame" x="286" y="176" width="200" height="162"/>
+                            </pickerView>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n67-SM-TSc" userLabel="Scout_PickerView">
+                                <rect key="frame" x="286" y="92" width="178" height="148"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.09806305652591274" green="0.93780531866915151" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="mt9-cO-ssA" firstAttribute="top" secondItem="go2-t3-qDL" secondAttribute="bottom" constant="50" id="OzD-k8-73N"/>
+                            <constraint firstItem="go2-t3-qDL" firstAttribute="top" secondItem="vi4-vN-AdP" secondAttribute="bottom" constant="50" id="qdo-by-S9u"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Home" id="P3B-Yf-PEW">
+                        <barButtonItem key="leftBarButtonItem" image="menu-button.png" id="OYu-2n-sFF">
+                            <connections>
+                                <action selector="onMenu:" destination="zDg-mK-JoU" id="tFm-mD-Rzs"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Go" id="vvC-az-m1D">
+                            <connections>
+                                <segue destination="Phx-gt-4Bi" kind="show" id="HVU-Nq-xRq"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="scoutNameTextField" destination="go2-t3-qDL" id="uyo-Mk-eKn"/>
+                        <outlet property="scoutPickerView" destination="n67-SM-TSc" id="HfI-Sb-HdB"/>
+                        <outlet property="teamAssociatedTextField" destination="vi4-vN-AdP" id="Cbw-zc-Ff1"/>
+                        <outlet property="tournamentTextField" destination="mt9-cO-ssA" id="u2h-0j-CXU"/>
+                        <outlet property="tournamentsPickerView" destination="d4P-w0-pPu" id="o0I-vT-eeU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XJU-bH-vPB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-456" y="598"/>
+        </scene>
+        <!--Side Panel View Controller-->
+        <scene sceneID="4gW-ye-Ucz">
+            <objects>
+                <viewController storyboardIdentifier="LeftViewController" id="l4H-Wz-L90" customClass="SidePanelViewController" customModule="Scout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B9j-Dp-TLu"/>
+                        <viewControllerLayoutGuide type="bottom" id="HHq-gS-H03"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qec-C9-1GR">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hD5-bP-ty3">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="menucellidentifier" id="Sb5-Zs-EJO">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sb5-Zs-EJO" id="hmS-Zn-6af">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="l4H-Wz-L90" id="WEg-U4-eoi"/>
+                                    <outlet property="delegate" destination="l4H-Wz-L90" id="ao3-9y-b5d"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="hD5-bP-ty3" id="lcp-K2-KC2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OcS-iQ-dGN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1714" y="263"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cyT-16-Jmx">
+            <objects>
+                <navigationController id="N9w-Af-tOB" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Gpb-Kk-WbW">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="zDg-mK-JoU" kind="relationship" relationship="rootViewController" id="JvA-rD-M2u"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wbi-0c-qGq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1192" y="1064"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="bMx-9t-plM">
+            <objects>
+                <tabBarController id="nHs-xv-dak" sceneMemberID="viewController">
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="f1l-Ot-Nlw">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="rtV-zx-hEf" kind="relationship" relationship="viewControllers" id="5RB-Gv-wZ8"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PaA-Af-3b5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8" y="1359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Afoofa.jpg" width="720" height="960"/>
+        <image name="menu-button.png" width="22" height="17"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="HVU-Nq-xRq"/>
+        <segue reference="VNR-Ty-VfI"/>
+    </inferredMetricsTieBreakers>
+</document>
