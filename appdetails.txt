@@ -1,45 +1,16 @@
-ios developer
+-ask user what word they want to replace
+-ask user what word they want to replace it with
 
-	register apped ( need under id)
-	device
-	profiler
+-open the file for reading
+-read each line
+	-replace the word
+	-collect the replaced string
+-close the file
 
-clearing git credentials on mac
- git credential-osxkeychain erase
-host=github.com
-protocol=https
-[Press Return]
+-open the file for writing
+-for each replaced string write to new file
+-close file
 
-adding push notifications
-   - add code in view controller to enable
-   project settings
-   - enable the push notification   
-   - create certificate request
-   - download profile again and double click
-iPhone:9ad68a9ce0a750e252edad2b920c42006629abe008fccb751e5205809eef1391
-- export public key in .pem format
-- export private key in .p12 format
-- extract private key from p12 with openssl
-    openssl pkcs12 -in filename.pfx -nocerts -out key.pem
-	openssl rsa -in key.pem -out server.key (remove pass phrase)
-    download the push certificate from developer app
-	double click to import in to key chain
-    export the certificate in to .pem format from key chain
-
-
-- aws , sis
-   - create application ( with private key and certificate from .pem files)
-   - create end point with device token ( device token can be obtained by running once on the device)
-   - test through aws console by using “publish to end point”
-   - create new topic
-   - add subscription to this topic ( with protocol as application and endpoint urn as application endpoint arn)
-   - test by “publish to topic” 
-
-https://www.appcoda.com/push-notification-ios/
-
-
-
-      
 
 
    
