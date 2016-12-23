@@ -1,0 +1,37 @@
+comgooglemaps://?saddr=Google+Inc,+8th+Avenue,+New+York,+NY&daddr=John+F.+Kennedy+International+Airport,+Van+Wyck+Expressway,+Jamaica,+New+York&directionsmode=transit
+
+ 
+    - DateTime
+    - Location
+
+Sourabh
+   Activities(category)
+	Basketball(activity)
+		Schedule
+        Dance
+		Schedule
+        Shoot 360
+		Schedule
+        Programming
+		Schedule
+
+   School
+        Math(category)
+		Class Work(activity)
+			Mon Dec 23
+		   	   Notes here
+			Tue Dec 24 
+		   	   Notes here
+		Tests
+			Fri Dec 26
+		Links
+			mathcool.com
+		
+	Science
+	Mandrin
+	Social
+	PE
+   Goals
+        Reading
+	Tables
+        
