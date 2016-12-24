@@ -34,7 +34,7 @@ class Repository{
     func getMenuItems(callback : @escaping ( [String]) -> Void){
         
         
-        get( url: URL(string: "https://5bsr9e6203.execute-api.us-west-2.amazonaws.com/staging/menu")!, callback: {
+        get( url: URL(string: getApiUrl(resource: "menuitems"))!, callback: {
             (json) -> Void in
             
             //Implement your logic
@@ -65,7 +65,7 @@ class Repository{
         let order = String(format:"{\"name\": \"\(menuitem)\"}")
         
         
-        post( url: URL(string: "https://5bsr9e6203.execute-api.us-west-2.amazonaws.com/staging/order")!, input:order, callback: {
+        post( url: URL(string: getApiUrl(resource: "orders"))!, input:order, callback: {
             (json) -> Void in
             
             print("ordered successfully")
@@ -154,5 +154,9 @@ class Repository{
             
         })
         task.resume()
+    }
+    
+    func getApiUrl(resource:String) ->String{
+        return "https://5bsr9e6203.execute-api.us-west-2.amazonaws.com/staging/" + resource
     }
 }

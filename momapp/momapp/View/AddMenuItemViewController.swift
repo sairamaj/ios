@@ -13,45 +13,27 @@ protocol MenuItemAddedDelegate{
     func MenuItemAdded(menuItem:String)
 }
 
+/*
+ Adds menu item.
+ Swift forms were used here: https://github.com/ortuman/SwiftForms.git
+ 
+ */
 class AddMenuItemViewController: FormViewController {
-
+    
     var delegate:MenuItemAddedDelegate? = nil
     var curentMenuItems:[String] = []
     
     struct Static {
         static let nameTag = "name"
-        static let passwordTag = "password"
-        static let lastNameTag = "lastName"
-        static let jobTag = "job"
-        static let emailTag = "email"
-        static let URLTag = "url"
-        static let phoneTag = "phone"
-        static let enabled = "enabled"
-        static let check = "check"
-        static let segmented = "segmented"
-        static let picker = "picker"
-        static let birthday = "birthday"
-        static let categories = "categories"
-        static let button = "button"
-        static let stepper = "stepper"
-        static let slider = "slider"
-        static let textView = "textview"
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        /*let dialogheigth:CGFloat = self.view.frame.height * 0.5;
-        let dialogwidth:CGFloat = self.view.frame.width * 0.5;
-        self.preferredContentSize = CGSize(width: dialogwidth, height: dialogheigth)
         
-        self.view.backgroundColor = UIColor.black.withAlphaComponent(0.8)
-        self.showAnimate()
- */
-
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,17 +57,12 @@ class AddMenuItemViewController: FormViewController {
         
         self.form = form
     }
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+     Saves menu item.
+     */
     @IBAction func onSave(_ sender: Any) {
-       
+        
         
         if self.form.formValues()["name"] == nil {
             showError(message: "Cannot be empty")
@@ -100,7 +77,7 @@ class AddMenuItemViewController: FormViewController {
                 return
             }
             //  self.present(alertController, animated: true, completion: nil)
-            Repository().saveMenuItem(menuitem: menuItem as! String)
+            Repository.shared.saveMenuItem(menuitem: menuItem as! String)
             navigationController?.popViewController(animated: true)
             if let callback = self.delegate{
                 callback.MenuItemAdded(menuItem: menuItem as! String)
@@ -110,22 +87,11 @@ class AddMenuItemViewController: FormViewController {
             return
         }
         
-       
-
-    }
-
-    func showAnimate()
-    {
-  
-        self.view.transform = CGAffineTransform(scaleX: 1.3, y: 1.3)
-        self.view.alpha = 0.0;
-        UIView.animate(withDuration: 0.25, animations: {
-            self.view.alpha = 1.0
-            self.view.transform = CGAffineTransform(scaleX: 1.0, y: 1.0)
-        });
     }
     
-    
+    /*
+     shows Error.
+     */
     func showError(message:String) -> Void{
         let alertController = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
         let cancel = UIAlertAction(title: "OK", style: .cancel) { (action) in
@@ -135,6 +101,9 @@ class AddMenuItemViewController: FormViewController {
         self.present(alertController, animated: true)
     }
     
+    /*
+     Chekcs whether item already exists or not
+     */
     func IsExists(menuItem:String) -> Bool{
         for item in self.curentMenuItems{
             if( item.lowercased() == menuItem.lowercased()){
@@ -145,4 +114,4 @@ class AddMenuItemViewController: FormViewController {
         return false
     }
     
-    }
+}

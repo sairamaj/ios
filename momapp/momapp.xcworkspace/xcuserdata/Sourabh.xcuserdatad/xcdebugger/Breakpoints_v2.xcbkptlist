@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "momapp/View/MenuTableViewController.swift"
-            timestampString = "503534319.560399"
+            timestampString = "504299072.163091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "100"
+            endingLineNumber = "100"
             landmarkName = "onAdd(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "momapp/View/MenuTableViewController.swift"
-            timestampString = "503534319.560399"
+            timestampString = "504299072.163091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "128"
-            endingLineNumber = "128"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "MenuItemAdded(menuItem:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "momapp/View/AddMenuItemViewController.swift"
-            timestampString = "503534319.560399"
+            timestampString = "504299072.163091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "71"
+            endingLineNumber = "71"
             landmarkName = "onSave(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "momapp/View/AddMenuItemViewController.swift"
-            timestampString = "503534319.560399"
+            timestampString = "504299072.163091"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "onSave(_:)"
             landmarkType = "7">
          </BreakpointContent>

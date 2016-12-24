@@ -8,6 +8,9 @@
 
 import UIKit
 
+/*
+    Shows orders.
+ */
 class SavedOrderTableViewController: UITableViewController {
 
     var orders = [Order]()
@@ -20,13 +23,16 @@ class SavedOrderTableViewController: UITableViewController {
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
-        Repository().getOrders( callback: {
+        Repository.shared.getOrders( callback: {
             (objects) -> Void in
             
             
             for object in objects{
                 self.orders.append(object)
             }
+            
+            self.orders = self.orders.sorted(by: { (o1, o2) -> Bool in
+                o1.Date > o2.Date      })
             
             DispatchQueue.main.async {
                 self.tableView.reloadData()    // reload in UI thread.
@@ -60,58 +66,12 @@ class SavedOrderTableViewController: UITableViewController {
         // Configure the cell...
         let order = self.orders[indexPath.row]
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "MMM HH:mm"
+        dateFormatter.dateFormat = "EEE MMM dd hh:mm a"
         let dateString = dateFormatter.string(from: order.Date)
 
         
-        cell.textLabel?.text = order.MenuItem + "( " + dateString + " )"
+        cell.textLabel?.text = dateString + "     " + order.MenuItem
         return cell
     }
     
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
